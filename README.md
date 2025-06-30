@@ -14,7 +14,7 @@ This project classifies emotions from speech using MFCC features and a hybrid CN
 - Trained using categorical crossentropy + Adam optimizer
 
 ## 📊 Accuracy
-- Achieved **~70% validation accuracy** on mixed RAVDESS + TESS dataset
+- Achieved **~85% validation accuracy** on mixed RAVDESS + TESS dataset
 
 ## 📈 Evaluation
 - Includes confusion matrix and classification report
