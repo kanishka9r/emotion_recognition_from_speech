@@ -1,27 +1,63 @@
 # 🎙️ Speech Emotion Recognition using CNN + BiLSTM
 
-This project classifies emotions from speech using MFCC features and a hybrid CNN + BiLSTM model.
+This project classifies human emotions from speech using a hybrid deep learning model built on top of MFCC features extracted from audio datasets (RAVDESS and TESS).
 
-## 📂 Datasets Used
-- [RAVDESS](https://zenodo.org/record/1188976)
-- [TESS](https://tspace.library.utoronto.ca/handle/1807/24487)
+---
 
-## 🎯 Emotions Covered
-- Angry, Disgust, Fearful, Happy, Neutral, Sad, Surprised
+## ✅ Features
 
-## 🧠 Model Architecture
-- `Conv1D → MaxPooling → Conv1D → MaxPooling → BiLSTM → Dropout → Dense`
-- Trained using categorical crossentropy + Adam optimizer
+- Uses **MFCC (Mel-Frequency Cepstral Coefficients)** for audio feature extraction
+- Combined **CNN** and **BiLSTM** architecture for better temporal and spatial analysis
+- Includes **early stopping** and **dropout** to prevent overfitting
+- Supports **multi-dataset training** (RAVDESS and TESS)
+- Evaluates model using **confusion matrix** and **classification report**
+- Achieved ~80% validation accuracy
 
-## 📊 Accuracy
-- Achieved **~85% validation accuracy** on mixed RAVDESS + TESS dataset
+---
 
-## 📈 Evaluation
-- Includes confusion matrix and classification report
-- Visualizes training and validation accuracy across epochs
+## 📂 Dataset Used
 
-## 🛠️ Requirements
-Install dependencies using:
+- [RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)](https://zenodo.org/record/1188976)
+- [TESS (Toronto Emotional Speech Set)](https://tspace.library.utoronto.ca/handle/1807/24487)
 
-```bash
-pip install -r requirements.txt
+---
+## 📊 Model Architecture
+
+- `Conv1D` → `MaxPooling1D`
+- `Conv1D` → `MaxPooling1D`
+- `Bidirectional(LSTM)`
+- `Dropout`
+- `Dense(softmax)`
+
+---
+
+## 📊 Future Enhancements
+
+- Use **attention mechanism** on top of LSTM
+- Add **augmentation** (noise, pitch shift, time stretch)
+- Support for **real-time prediction** using microphone input
+- Train on more datasets like **EMO-DB**, **SAVEE**
+
+---
+
+## 🧠 Tech Stack
+
+- Python, TensorFlow, Keras
+- Librosa for feature extraction
+- Scikit-learn for evaluation
+
+---
+
+## 🚀 How to Run
+
+1. Download RAVDESS and TESS datasets into `ravdess/` and `tess/` folders.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Run training:
+   ```bash
+   python emotion_lstm_model.py
+4. After training completes, the model will:
+Display a confusion matrix
+Show accuracy plots
+Save the model as emotion_lstm_model.h5
