@@ -1,10 +1,10 @@
-# 🎙️ Speech Emotion Recognition using CNN + BiLSTM
+# Speech Emotion Recognition using CNN + BiLSTM
 
 This project classifies human emotions from speech using a hybrid deep learning model built on top of MFCC features extracted from audio datasets (RAVDESS and TESS).
 
 ---
 
-## ✅ Features
+## Features
 
 - Uses **MFCC (Mel-Frequency Cepstral Coefficients)** for audio feature extraction
 - Combined **CNN** and **BiLSTM** architecture for better temporal and spatial analysis
@@ -15,13 +15,13 @@ This project classifies human emotions from speech using a hybrid deep learning 
 
 ---
 
-## 📂 Dataset Used
+##  Dataset Used
 
 - [RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)](https://zenodo.org/record/1188976)
 - [TESS (Toronto Emotional Speech Set)](https://tspace.library.utoronto.ca/handle/1807/24487)
 
 ---
-## 📊 Model Architecture
+## Model Architecture
 
 - `Conv1D` → `MaxPooling1D`
 - `Conv1D` → `MaxPooling1D`
@@ -31,7 +31,7 @@ This project classifies human emotions from speech using a hybrid deep learning 
 
 ---
 
-## 📊 Future Enhancements
+##  Future Enhancements
 
 - Use **attention mechanism** on top of LSTM
 - Add **augmentation** (noise, pitch shift, time stretch)
@@ -40,7 +40,7 @@ This project classifies human emotions from speech using a hybrid deep learning 
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 
 - Python, TensorFlow, Keras
 - Librosa for feature extraction
@@ -48,7 +48,7 @@ This project classifies human emotions from speech using a hybrid deep learning 
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. Download RAVDESS and TESS datasets into `ravdess/` and `tess/` folders.
 2. Install dependencies:
