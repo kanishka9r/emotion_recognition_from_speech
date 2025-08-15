@@ -59,8 +59,10 @@ This project classifies human emotions from speech using a hybrid deep learning 
    python emotion_lstm_model.py
 4. After training completes, the model will:
    -Display a confusion matrix
+   
    -Show accuracy plots
-   -Save the model as emotion_lstm_model.h5
+   
+   -Save the model as emotion_lstm_model.h5  
 
 ## License
 This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
